@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Heading Tags its take a full width and always start from new line-->
+    <h1>Hello Wolrd</h1>
+    <h2>Hello Wolrd</h2>
+    <h3>Hello world</h3>
+    <h4>Hello World</h4>
+    <h5>Hello World</h5>
+    <h6>Hello World</h6>
+    <!--Paragraph Tags-->
+    <p>This is a paragraph tag</p>
+
+    <!--List Tagg-->
+    <ol>
+        <li>
+            Naruto
+        </li>
+        <li>Itachi</li>
+        <li>Hinata</li>
+        <li>Obito</li>
+        <li>Rin</li>
+    </ol>
+    <ul>
+         <li>
+            Naruto
+        </li>
+        <li>Itachi</li>
+        <li>Hinata</li>
+        <li>Obito</li>
+        <li>Rin</li>
+    </ul>
+    <dl>
+        <dt>About me</dt>
+        <dd>I am Ranjith </dd>
+    </dl>
+</thead>
+
+    <!--Table Tags-->
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>age</td>
+                <td>Conatct</td>
+            </tr>
+             
+        <tbody>
+            <tr>
+                <td>Ranjith</td>
+                <td>23</td>
+                <td>9003815196</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--input tags-->
+    <input type="text">
+    <input type ="number">
+    <input type="date">
+    <input type="datetime">
+    <input type="range">
+    <input type="radio">
+    <input type="checkbox">
+    <input type="color">
+    <input type="time">
+    <input type="button" value="Button">
+    <input type="email">
+    <input type="file">
+    <input type="password">
+    <!--Forms tage-->
+    <form>
+        <label>name</label>
+    </form>
+    <!--anchor tag-->
+    <a href="#" >Click</a>
+
+    <!--Img tag-->
+    <img src="" alt="no image">
+    <!--Audio and Video Tag-->
+
+    <audio controls>
+        <source src="" type="audio.mp3">
+    </audio>
+
+    <video controls>
+        <source src="" type="video.mp4">
+    </video>
+ 
+    <label>Name</label>
+    <input type="text" id="txtname" placeholder="enter the name">
+    <br>
+    <label>Age</label>
+    <input type="number" id="txtage" placeholder="enterthe age">
+    <button id="submit">submit</button>
+
+
+    <!--JavaScript-->
+    <script>
+       <!--syncro and asynco-->
+        <!--DOM-->
+         document.getElementById("submit").addEventListener("click",()=>{
+            const name1=document.getElementById("txtname").value;
+            const Age=document.getElementById("txtage").value;
+            sendthevalue(name1,Age)
+        })
+
+       function sendthevalue(names,age){
+
+         const userinputs = {
+            Name:names,
+            Age:age
+         }
+         const jsonData = JSON.stringify(userinputs);
+         console.log(jsonData)
+       }
+
+      
+        <!-- Data Type and Variable-->
+       
+        var a = 10;
+        let b = 18;
+        const c =true;
+
+        console.log(typeof(a));
+        console.log(typeof(b));
+        console.log(typeof(c));
+
+        <!--Operators-->
+        let num1 =10;
+        let num2 =20;
+        console.log(num1+num2);
+        console.log(num1-num2);
+        console.log(num1>num2);
+        console.log(num1<num2);
+        console.log(num1==num2);
+        console.log(num1>=num2);
+        console.log(num1===num2);
+
+        <!--Statements and Loops-->
+
+        if(b>18){
+            console.log("You can Drive the car")
+        }
+        else if(b==18){
+            console.log("You can apply the voter ID")
+        }
+        else{
+            console.log("You can't Drive the Car")
+        }
+
+        if(b>=18){
+            if(a!=10){
+                console.log(a)
+            }
+            else{
+                console.log(b)
+            }
+        }
+
+        console.log(b>=18?"Adult":"child")
+
+        b = 2;
+        switch (b){
+            case 1:
+                console.log("Hello")
+                break;
+            case 2 :
+                console.log("Bye")
+                break;
+            default:
+                console.log("Infinte")
+        }
+        Showmessage()
+         add(90 , 20)
+         let Ml=Mul(10,20)
+         console.log(Ml);
+
+        for (let i = 5 ; i > 0;i--){
+            console.log(i);
+        }
+
+        <!----Functions---->
+        function Showmessage(){
+            console.log("Welcome");
+        }
+
+        function add(a , c){
+            console.log(a+c)
+        }
+
+        function Mul(a,b){
+            return a*b
+        }
+
+        let sub = function subtraction(a,b){
+            return a-b
+        }
+        console.log(sub(30,20))
+
+        const value =()=>{
+            console.log("Ranjith");
+        }
+        value();
+
+        const numbers=()=>10
+        console.log(numbers())
+
+        const names=(names = "Ranjith")=>{
+            console.log(names)
+        }
+
+        names();
+        names("Thank you")
+
+        <!--String Methods---->
+
+        let values ="Ranjith Kumar"
+        console.log(values.length)
+        console.log(values.toUpperCase())
+        console.log(values.toLowerCase())
+        console.log(values.charAt(2))
+        console.log(values.charCodeAt(0))
+        console.log(values.includes("k"))
+        console.log(values.indexOf("Ranjith"))
+        console.log(values.lastIndexOf("ar"))
+        console.log(values.endsWith("r"))
+        console.log(values.startsWith("r"))
+        console.log(values.substring(0,5))
+        console.log(values.slice(0,5))
+        console.log(values.concat("18"))
+        console.log(values.split( " " ))
+        console.log(values.replace("Ranjith","Hello"))
+        console.log(values.replaceAll("a","A"))
+        console.log(values.repeat(5))
+
+        <!--Array methods-->
+
+        let fruits = ["Mango","orahge","apple","banana"] 
+        console.log(fruits.length)
+        fruits.push(50)
+        console.log(fruits)
+        fruits.unshift("Tomato")
+        console.log(fruits)
+
+        fruits.shift();
+        fruits.pop();
+        console.log(fruits)
+
+        var num = [10,30,40,60,80]
+        console.log(num.map(x=>x*2))
+
+        console.log(num.find(x=>x>20))
+        console.log(num.filter(x=>x > 10))
+        console.log(num.reduce((a,b)=>a+b),1)
+
+        let objectvalue=[{
+            name:"Ranjith",
+            age:28,
+            place:"Chennai"
+        },{
+            name:"Raju",
+            age:28,
+            place:"Chennai"
+        }]
+
+        console.log(objectvalue[1]["age"])
+
+
+    </script>
+
+</body>
+</html>
